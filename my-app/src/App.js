@@ -1,12 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-function App() {
-  const name = "evondev";
-  function fullname(firstname, lastname) {
-    return `${firstname} ${lastname}`;
-  }
-
+function Feature() {
   return (
     <div className="feature">
       <img src="" alt="" className="feature-image" />
@@ -17,6 +12,25 @@ function App() {
         Consectetur reprehenderit eveniet illum culpa praesentium itaque
         repudiandae quaerat similique eligendi fugiat.
       </p>
+    </div>
+  );
+}
+
+// parent component
+function App() {
+  const name = "evondev";
+  function fullname(firstname, lastname) {
+    return `${firstname} ${lastname}`;
+  }
+
+  return (
+    <div>
+      {/**child component */}
+      {/* <Feature></Feature>
+      <Feature></Feature>
+      <Feature></Feature> */}
+      <YoutubeItem image="https://images.unsplash.com/photo-1666919643134-d97687c1826c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80"></YoutubeItem>
+      <YoutubeItem image="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"></YoutubeItem>
     </div>
   );
 
@@ -40,6 +54,23 @@ function App() {
   //     </header>
   //   </div>
   // );
+}
+
+function YoutubeItem(props) {
+  return (
+    <div className="yotube-item">
+      <div className="youtube-image">
+        <img src={props.image} alt="" />
+      </div>
+      <div className="yotube-footer">
+        <img src={props.image} alt="" className="youtube-avatar" />
+        <div className="youtube-info">
+          <h3 className="yotube-title">Learning React</h3>
+          <h4 className="yotube-author">Evondev</h4>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
