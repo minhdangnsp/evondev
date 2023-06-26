@@ -1,33 +1,20 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-/**
- * element = <div id="root">Hello world</div> : JSX
- * element = React.createElement('div', {id: 'root'}, 'Hello world') : JS
- * function createElement(elementType, props, ...children)
- * elementType = 'div', 'p', 'span'
- * props = className, id, src, alt, href, ...
- * ... children:
- * element2 = (<div>
- * <span>Hello</span> <span>World</span>
- * </div>)
- * element 2 = React.createElement('div', null,
- * childrend: [
- *  React.createElement('span', null, 'Hello'),
- *  ' ',
- *  React.createElement('span', null, 'World')
- * ]
- * )
- */
-
 function App() {
+  const name = "evondev";
+  function fullname(firstname, lastname) {
+    return `${firstname} ${lastname}`;
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        {/* <p>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
+        </p> */}
+        <h1>Hello {name}</h1>
+        <h2>{fullname("Nguyen Tran", "Minh Dang")}</h2>
         <a
           className="App-link"
           href="https://reactjs.org"
