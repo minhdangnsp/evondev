@@ -1,5 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+
+/**
+ * element = <div id="root">Hello world</div> : JSX
+ * element = React.createElement('div', {id: 'root'}, 'Hello world') : JS
+ * function createElement(elementType, props, ...children)
+ * elementType = 'div', 'p', 'span'
+ * props = className, id, src, alt, href, ...
+ * ... children:
+ * element2 = (<div>
+ * <span>Hello</span> <span>World</span>
+ * </div>)
+ * element 2 = React.createElement('div', null,
+ * childrend: [
+ *  React.createElement('span', null, 'Hello'),
+ *  ' ',
+ *  React.createElement('span', null, 'World')
+ * ]
+ * )
+ */
 
 function App() {
   return (
