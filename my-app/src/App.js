@@ -1,11 +1,11 @@
 import "./App.css"; // import css file
-import Toggle from "./components/state/Toggle";
+import Counter from "./components/Counter/Counter";
 
 // parent component
 function App() {
   return (
     <div>
-      <Toggle></Toggle>
+      <Counter></Counter>
     </div>
   );
 }
