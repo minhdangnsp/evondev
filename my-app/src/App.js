@@ -1,12 +1,11 @@
 import "./App.css"; // import css file
-import YoutubeList from "./components/youtube/YoutubeList";
+import Toggle from "./components/state/Toggle";
 
 // parent component
 function App() {
-  const name = "Evondev";
   return (
     <div>
-      <YoutubeList>{name}</YoutubeList>
+      <Toggle></Toggle>
     </div>
   );
 }
