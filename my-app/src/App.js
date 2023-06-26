@@ -25,12 +25,13 @@ function App() {
 
   return (
     <div>
-      {/**child component */}
-      {/* <Feature></Feature>
-      <Feature></Feature>
-      <Feature></Feature> */}
-      <YoutubeItem image="https://images.unsplash.com/photo-1666919643134-d97687c1826c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80"></YoutubeItem>
-      <YoutubeItem image="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"></YoutubeItem>
+      <YoutubeItem
+        image="https://images.unsplash.com/photo-1666919643134-d97687c1826c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80"
+        avatar="https://images.unsplash.com/photo-1687565021770-cdb4e32002a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+        author="Evondev"
+        title="I am Frontend Developer"
+      ></YoutubeItem>
+      {/* <YoutubeItem image="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"></YoutubeItem> */}
     </div>
   );
 
@@ -58,15 +59,17 @@ function App() {
 
 function YoutubeItem(props) {
   return (
-    <div className="yotube-item">
+    <div className="youtube-item">
       <div className="youtube-image">
         <img src={props.image} alt="" />
       </div>
-      <div className="yotube-footer">
+      <div className="youtube-footer">
         <img src={props.image} alt="" className="youtube-avatar" />
         <div className="youtube-info">
-          <h3 className="yotube-title">Learning React</h3>
-          <h4 className="yotube-author">Evondev</h4>
+          <h3 className="youtube-title">{props.title || "This is a title"}</h3>
+          <h4 className="youtube-author">
+            {props.author || "This is an author name"}
+          </h4>
         </div>
       </div>
     </div>
