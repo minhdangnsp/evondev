@@ -1,40 +1,23 @@
-import logo from "./logo.svg";
 import "./App.css"; // import css file
+import { YoutubeData } from "./YoutubeData";
 
 // parent component
 function App() {
   return (
     <div className="youtube-list">
-      <YoutubeItem
-        image="https://images.unsplash.com/photo-1666919643134-d97687c1826c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80"
-        avatar="https://images.unsplash.com/photo-1687565021770-cdb4e32002a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-        author="Evondev"
-        title="I am Frontend Developer"
-      ></YoutubeItem>
-      <YoutubeItem image="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"></YoutubeItem>
+      {YoutubeData.map((item, index) => (
+        <div>
+          <YoutubeItem
+            key={item.id} // key is not required, but when rendering list, it is recommended to have key
+            image={item.image}
+            avatar={item.avatar || item.image}
+            author={item.author}
+            title={item.title}
+          ></YoutubeItem>
+        </div>
+      ))}
     </div>
   );
-
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       {/* <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p> */}
-  //       <h1>Hello {name}</h1>
-  //       <h2>{fullname("Nguyen Tran", "Minh Dang")}</h2>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
 }
 
 function YoutubeItem(props) {
