@@ -66,7 +66,12 @@ function YoutubeItem(props) {
       <div className="youtube-footer">
         <img src={props.image} alt="" className="youtube-avatar" />
         <div className="youtube-info">
-          <h3 className="youtube-title">{props.title || "This is a title"}</h3>
+          <h3
+            className="youtube-title"
+            style={{ backgroundColor: "lightblue" }}
+          >
+            {props.title || "This is a title"}
+          </h3>
           <h4 className="youtube-author">
             {props.author || "This is an author name"}
           </h4>
