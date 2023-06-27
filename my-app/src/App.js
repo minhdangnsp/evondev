@@ -1,11 +1,11 @@
 import "./App.css"; // import css file
-import Counter from "./components/Counter/Counter";
+import Game from "./components/tictactoe/Game";
 
 // parent component
 function App() {
   return (
     <div>
-      <Counter></Counter>
+      <Game></Game>
     </div>
   );
 }
