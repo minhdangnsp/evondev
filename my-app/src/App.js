@@ -1,11 +1,12 @@
 import "./App.css"; // import css file
-import DoubleCounter from "./components/Counter/DoubleCounter";
+import Button from "./components/button/Button";
 
 // parent component
 function App() {
   return (
     <div>
-      <DoubleCounter></DoubleCounter>
+      <Button>Primary</Button>
+      <Button secondary>Secondary</Button>
     </div>
   );
 }
