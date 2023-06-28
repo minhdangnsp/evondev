@@ -1,12 +1,18 @@
 import "./App.css"; // import css file
-import Button from "./components/button/Button";
+import Card from "./components/card/Card";
+import CardList from "./components/card/CardList";
 
 // parent component
 function App() {
   return (
     <div>
-      <Button>Primary</Button>
-      <Button secondary>Secondary</Button>
+      <CardList>
+        {Array(9)
+          .fill()
+          .map((_, index) => (
+            <Card></Card>
+          ))}
+      </CardList>
     </div>
   );
 }
